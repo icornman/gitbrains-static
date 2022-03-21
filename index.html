@@ -6,46 +6,47 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="alpine.min.js" defer></script>
 </head>
-<body class="antialiased">
-    <div class="bg-lime-700">
-        <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
-          <div class="flex items-center justify-between flex-wrap">
-            <div class="w-0 flex-1 flex items-center">
-              <span class="flex p-2 rounded-lg bg-lime-600">
-                <img src="/img/uk.png" class="w-6 h-6" alt="flag-of-ukraine" />
-              </span>
-              <p class="ml-3 font-medium text-white truncate">
-                <span class="md:hidden"> #StandWithUkraine </span>
-                <span class="hidden md:inline"> #StandWithUkraine </span>
-              </p>
-            </div>
-            <div class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
-              <a href="https://uahelp.monobank.ua/" class="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-lime-600 bg-white hover:bg-lime-50">Donate</a>
-            </div>
-            <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
-              <button type="button" class="-mr-1 flex p-2 rounded-md hover:bg-lime-600 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2">
-                <span class="sr-only">Dismiss</span>
-                <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
+<body class="antialiased" x-data="{ isBannerOpen: true }">
+  <div class="bg-lime-700" x-show="isBannerOpen">
+    <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between flex-wrap">
+        <div class="w-0 flex-1 flex items-center">
+          <span class="flex p-2 rounded-lg bg-lime-600">
+            <img src="/img/uk.png" class="w-6 h-6" alt="flag-of-ukraine" />
+          </span>
+          <p class="ml-3 font-medium text-white truncate">
+            <span class="md:hidden"> #StandWithUkraine </span>
+            <span class="hidden md:inline"> #StandWithUkraine </span>
+          </p>
+        </div>
+        <div class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
+          <a href="https://uahelp.monobank.ua/" class="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-lime-600 bg-white hover:bg-lime-50">Donate</a>
+        </div>
+        <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
+          <button @click="isBannerOpen = false" type="button" class="-mr-1 flex p-2 rounded-md hover:bg-lime-600 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2">
+            <span class="sr-only">Dismiss</span>
+            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="relative z-0 flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
+    <div class="max-w-xl mx-auto sm:px-6 lg:px-8">
+      <div class="flex items-center pt-8 sm:justify-start sm:pt-0">
+          <div class="px-4 text-lg text-gray-500 border-r uppercase border-gray-400 tracking-wider">
+            GitBrains
+          </div>
+          <div class="ml-4 text-lg text-gray-500 uppercase tracking-wider">
+            Coming Soon
           </div>
         </div>
       </div>
-    <div class="relative z-0 flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
-        <div class="max-w-xl mx-auto sm:px-6 lg:px-8">
-            <div class="flex items-center pt-8 sm:justify-start sm:pt-0">
-                <div class="px-4 text-lg text-gray-500 border-r uppercase border-gray-400 tracking-wider">
-                    GitBrains
-                </div>
-                <div class="ml-4 text-lg text-gray-500 uppercase tracking-wider">
-                    Coming Soon
-                </div>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>
 </body>
 </html>
