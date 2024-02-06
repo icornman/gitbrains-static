@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>18.192.62.190</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="antialiased">
+  <div class="relative z-0 flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
+    <div class="max-w-xl mx-auto sm:px-6 lg:px-8 text-center">
+      <video controls="" autoplay="" class="rounded-xl hidden" allow="autoplay" name="media"><source src="http://18.192.62.190/jetiq.mp4" type="video/mp4"></video>
+	    <div class="flex items-center pt-8 pb-8 sm:justify-start sm:pt-0">
+        <div class="flex items-center pt-8 sm:justify-start sm:pt-0">
+          <div class="px-4 text-lg text-gray-500 border-r uppercase border-gray-400 tracking-wider">
+            18.192.62.190
+          </div>
+          <div class="ml-4 text-lg text-gray-500 uppercase tracking-wider">
+            Coming Soon
+          </div>
+        </div>
+      </div>
+      <button onclick="pressMe()" class="dark:text-white text-black text-xl underline">Read more</button>
+  </div>
+  <script>
+    function pressMe () {
+      let video = document.querySelector("video");
+      video.classList.remove("hidden")
+      video.play()
+    }
+  </script>
+</div>
+</body>
+</html>
+
